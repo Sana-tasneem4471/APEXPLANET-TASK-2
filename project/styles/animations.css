@@ -1,0 +1,125 @@
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-medium);
+}
+
+/* Button press animation */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: buttonPress 300ms ease;
+}
+
+/* Todo item animations */
+@keyframes todoAdded {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item-new {
+  animation: todoAdded var(--transition-medium);
+}
+
+@keyframes todoRemoved {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+}
+
+.todo-item-removing {
+  animation: todoRemoved var(--transition-short) forwards;
+}
+
+@keyframes todoChecked {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.todo-checkbox:checked {
+  animation: todoChecked 300ms ease;
+}
+
+/* Form submission animation */
+@keyframes formSubmit {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.form-submitting {
+  animation: formSubmit 500ms ease;
+}
+
+/* Notification animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+}
+
+.notification.show {
+  animation: slideIn 300ms ease forwards;
+}
+
+.notification.hide {
+  animation: slideOut 300ms ease forwards;
+}

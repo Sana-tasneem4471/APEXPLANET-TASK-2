@@ -1,0 +1,80 @@
+/* Flexbox layout examples */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.flex-item {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+/* CSS Grid layout examples */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-3);
+}
+
+.grid-item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  aspect-ratio: 16 / 9;
+  transition: transform var(--transition-short);
+}
+
+.grid-item:hover {
+  transform: translateY(-4px);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+  .grid-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: var(--space-3) 0;
+    gap: var(--space-4);
+  }
+  
+  .section {
+    gap: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+  
+  .form-group-inline {
+    flex-direction: column;
+  }
+}

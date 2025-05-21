@@ -1,0 +1,232 @@
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all var(--transition-short);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-500);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-600);
+}
+
+.btn-primary:active {
+  background-color: var(--primary-700);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-500);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-600);
+}
+
+.btn-secondary:active {
+  background-color: var(--secondary-700);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--primary-500);
+  padding: var(--space-1) var(--space-2);
+}
+
+.btn-text:hover {
+  background-color: var(--neutral-100);
+}
+
+.dark-mode .btn-text:hover {
+  background-color: var(--neutral-700);
+}
+
+.btn-text:active {
+  background-color: var(--neutral-200);
+}
+
+.dark-mode .btn-text:active {
+  background-color: var(--neutral-600);
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: var(--space-3);
+}
+
+.form-group-inline {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 0.9375rem;
+  color: var(--foreground);
+  background-color: var(--card-background);
+  transition: border-color var(--transition-short), box-shadow var(--transition-short);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.8125rem;
+  margin-top: var(--space-1);
+  min-height: 18px;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: var(--error);
+}
+
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.2);
+}
+
+/* Contact form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Todo list styles */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: 8px;
+  transition: background-color var(--transition-short);
+}
+
+.todo-item:hover {
+  background-color: var(--neutral-100);
+}
+
+.dark-mode .todo-item:hover {
+  background-color: var(--neutral-700);
+}
+
+.todo-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neutral-400);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--transition-short), border-color var(--transition-short);
+}
+
+.todo-checkbox:checked {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
+.todo-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo-text {
+  flex: 1;
+  transition: color var(--transition-short), text-decoration var(--transition-short);
+}
+
+.todo-item.completed .todo-text {
+  color: var(--neutral-500);
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  color: var(--neutral-500);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  transition: background-color var(--transition-short), color var(--transition-short);
+}
+
+.todo-delete:hover {
+  background-color: var(--neutral-200);
+  color: var(--error);
+}
+
+.dark-mode .todo-delete:hover {
+  background-color: var(--neutral-600);
+}

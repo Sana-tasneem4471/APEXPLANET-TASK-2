@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Project</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Dev<span class="accent">Skills</span></h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="material-icons" id="theme-icon">light_mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="section">
+      <div class="section-header">
+        <h2>Contact Form</h2>
+        <p>Practice form creation and validation</p>
+      </div>
+      
+      <div class="card">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <div class="error-message" id="name-error"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+            <div class="error-message" id="email-error"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <div class="error-message" id="subject-error"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message"></textarea>
+            <div class="error-message" id="message-error"></div>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>To-Do List</h2>
+        <p>Practice DOM manipulation and JavaScript</p>
+      </div>
+      
+      <div class="card">
+        <div class="todo-container">
+          <form id="todo-form" class="todo-form">
+            <div class="form-group form-group-inline">
+              <input type="text" id="todo-input" placeholder="Add a new task">
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+          
+          <div class="todo-stats">
+            <span id="tasks-count">0 tasks</span>
+            <button id="clear-completed" class="btn btn-text">Clear completed</button>
+          </div>
+          
+          <ul id="todo-list" class="todo-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid-demo">
+      <div class="section-header">
+        <h2>CSS Grid Gallery</h2>
+        <p>Practice CSS Grid layouts</p>
+      </div>
+      
+      <div class="card">
+        <div class="grid-gallery">
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg" alt="Mountain">
+          </div>
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg" alt="Ocean">
+          </div>
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/10363501/pexels-photo-10363501.jpeg" alt="Forest">
+          </div>
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/2649403/pexels-photo-2649403.jpeg" alt="Desert">
+          </div>
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg" alt="Sunset">
+          </div>
+          <div class="grid-item">
+            <img src="https://images.pexels.com/photos/1509582/pexels-photo-1509582.jpeg" alt="Waterfall">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Created as a web development learning project</p>
+    </div>
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
